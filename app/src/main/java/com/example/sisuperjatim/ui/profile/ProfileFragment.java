@@ -17,7 +17,6 @@ import com.example.sisuperjatim.R;
 import java.time.Instant;
 
 public class ProfileFragment extends Fragment {
-    private CardView cardView;
     private ProfileViewModel profileViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -26,14 +25,6 @@ public class ProfileFragment extends Fragment {
                 ViewModelProviders.of(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        cardView = (CardView) cardView.findViewById(R.id.input_data);
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Instant instant = new Instant(this, ProfileActivity.class);
-                startActivity(instant);
-            }
-        });
 
         return root;
     }

@@ -50,7 +50,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         android:layout_gravity="bottom"
-                        android:text="Jagung"
+                        android:text="Input"
                         android:textSize="14dp"
                         android:textAlignment="center">
                     </TextView>
@@ -73,7 +73,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         android:layout_gravity="bottom"
-                        android:text="Padi"
+                        android:text="View"
                         android:textSize="14dp"
                         android:textAlignment="center">
                     </TextView>
@@ -124,7 +124,8 @@
                         android:layout_gravity="bottom"
                         android:text="Jagung"
                         android:textAlignment="center"
-                        android:textSize="14sp"></TextView>
+                        android:textSize="14sp">
+                    </TextView>
 
                 </androidx.cardview.widget.CardView>
 

@@ -39,10 +39,19 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/style_btn"
         android:text="Login"
         android:textColor="@color/colorPutih"
         android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Belum punnya akun? Daftar disini"
+        android:textAlignment="center"
         />
 </LinearLayout>

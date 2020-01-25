@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -15,17 +14,21 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="260dp">
 
             <GridLayout
                 android:id="@+id/mainGrid"
                 android:layout_width="390dp"
                 android:layout_height="230dp"
+                android:layout_gravity="center"
                 android:alignmentMode="alignMargins"
                 android:columnCount="4"
                 android:columnOrderPreserved="false"
                 android:padding="15dp"
                 android:rowCount="2"
+                android:layout_margin="15dp"
+                android:elevation="2dp"
+                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +39,7 @@
                 <!-- Column 1 -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/jagung"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_margin="15dp"
                     app:cardElevation="0dp">
@@ -49,9 +52,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="bottom|center"
                         android:text="Jagung"
-                        android:textSize="14dp"
                         android:textAlignment="center">
                     </TextView>
                 </androidx.cardview.widget.CardView>
@@ -59,7 +61,7 @@
                 <!-- Column 2 -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/padi"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_margin="15dp"
                     app:cardElevation="0dp">
@@ -72,9 +74,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="bottom|center"
                         android:text="Padi"
-                        android:textSize="14dp"
                         android:textAlignment="center">
                     </TextView>
 
@@ -83,7 +84,7 @@
                 <!-- Column 3 -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/padi3"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_margin="15dp"
                     app:cardElevation="0dp">
@@ -96,9 +97,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="bottom|center"
                         android:text="Jagung"
-                        android:textSize="14dp"
                         android:textAlignment="center">
                     </TextView>
 
@@ -107,7 +107,7 @@
                 <!-- Column 4 -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/padi4"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_margin="15dp"
                     app:cardElevation="0dp">
@@ -120,9 +120,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="bottom|center"
                         android:text="Jagung"
-                        android:textSize="14dp"
                         android:textAlignment="center">
                     </TextView>
 
@@ -131,7 +130,7 @@
                 <!-- Column 1 -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/padi11"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_margin="15dp"
                     app:cardElevation="0dp">
@@ -144,9 +143,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="bottom|center"
                         android:text="Jagung"
-                        android:textSize="14dp"
                         android:textAlignment="center">
                     </TextView>
 
@@ -155,7 +153,7 @@
                 <!-- Column 2 -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/padi22"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_margin="15dp"
                     app:cardElevation="0dp">
@@ -168,9 +166,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="bottom|center"
                         android:text="Jagung"
-                        android:textSize="14dp"
                         android:textAlignment="center">
                     </TextView>
 
@@ -179,7 +176,7 @@
                 <!-- Column 3 -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/padi33"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_margin="15dp"
                     app:cardElevation="0dp">
@@ -192,9 +189,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="bottom|center"
                         android:text="Jagung"
-                        android:textSize="14dp"
                         android:textAlignment="center">
                     </TextView>
 
@@ -203,7 +199,7 @@
                 <!-- Column 4 -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/padi44"
-                    android:layout_width="60dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_margin="15dp"
                     app:cardElevation="0dp">
@@ -216,9 +212,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
-                        android:layout_gravity="bottom"
-                        android:text="Jagung"
-                        android:textSize="14dp"
+                        android:layout_gravity="bottom|center"
+                        android:text="Lainnya"
                         android:textAlignment="center">
                     </TextView>
 
@@ -231,26 +226,24 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
 
             <GridLayout
-                android:layout_width="390dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alignmentMode="alignMargins"
                 android:columnCount="1"
                 android:columnOrderPreserved="false"
-                android:padding="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:background="@drawable/grid_item">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <!-- Column 1 -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/info1"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     app:cardCornerRadius="10dp">
 
                 </androidx.cardview.widget.CardView>
@@ -260,7 +253,7 @@
                     android:id="@+id/info2"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     app:cardCornerRadius="10dp">
 
                 </androidx.cardview.widget.CardView>
@@ -270,7 +263,7 @@
                     android:id="@+id/info3"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     app:cardCornerRadius="10dp">
 
                 </androidx.cardview.widget.CardView>
@@ -280,7 +273,7 @@
                     android:id="@+id/info4"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     app:cardCornerRadius="10dp">
 
                 </androidx.cardview.widget.CardView>
@@ -290,7 +283,7 @@
                     android:id="@+id/info5"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     app:cardCornerRadius="10dp">
 
                 </androidx.cardview.widget.CardView>

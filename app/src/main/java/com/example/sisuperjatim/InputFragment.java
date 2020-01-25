@@ -3,12 +3,21 @@ package com.example.sisuperjatim;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 
 /**
@@ -19,7 +28,7 @@ import android.view.ViewGroup;
  * Use the {@link InputFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class InputFragment extends Fragment {
+public class InputFragment extends Fragment implements OnMapReadyCallback {
 
 //    protected void onCreate (Bundle savedInstanceState){
 //        super.onCreate(savedInstanceState);
@@ -37,6 +46,9 @@ public class InputFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    GoogleMap mGoogleMap;
+    MapView mMapView;
+    View mView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -63,6 +75,31 @@ public class InputFragment extends Fragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        mMapView = (MapView) mView.findViewById(R.id.mapinput);
+        if (mMapView != null){
+            mMapView.onCreate(null);
+            mMapView.onResume();
+            mMapView.getMapAsync((OnMapReadyCallback) this);
+        }
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+        MapsInitializer.initialize(getContext());
+        mGoogleMap = googleMap;
+        mGoogleMap.getUiSettings().setZoomControlsEnabled(true);
+        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(-7.9637127,112.6131008)).title("Warning").snippet("Percobaan"));
+        CameraPosition Liberty = CameraPosition.builder().target(new LatLng(-7.9637127,112.6131008)).zoom(14).bearing(0).tilt(0).build();
+        googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(Liberty));
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
@@ -75,7 +112,8 @@ public class InputFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_input, container, false);
+        mView = inflater.inflate(R.layout.fragment_input, container, false);
+        return mView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText username,password;
     private Button login;
     private TextView link_register;
-    private static String URL_LOGIN = "http://10.10.10.154/db/login.php";
+    private static String URL_LOGIN = "http://192.168.11.111/bptp/login.php";
 
 
     @Override
@@ -79,27 +79,20 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             String success = jsonObject.getString("success");
-                            JSONArray jsonArray = jsonObject.getJSONArray("login");
-
                             if (success.equals("1")){
-                                for (int i = 0; i < jsonArray.length(); i ++ ){
-                                    JSONObject object = jsonArray.getJSONObject(i);
-                                    String name = object.getString("name").trim();
-                                    String email = object.getString("email").trim();
 
-//                                    Toast.makeText(LoginActivity.this, "Logged in! \n"
-//                                            , Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(LoginActivity.this, ProfileFragment.class);
-                                    intent.putExtra("name", name);
-                                    intent.putExtra("email", email);
-                                    startActivity(intent);
+                                    Toast.makeText(LoginActivity.this, "Logged in! \n"
+                                            , Toast.LENGTH_SHORT).show();
+//                                    Intent intent = new Intent(LoginActivity.this, ProfileFragment.class);
+//                                    intent.putExtra("name", name);
+//                                    intent.putExtra("email", email);
+//                                    startActivity(intent);
 
 
                                 }
-                            }
+
                         } catch (JSONException e){
                             e.printStackTrace();
-                            login.setVisibility(View.GONE);
                             Toast.makeText(LoginActivity.this, "Something's wrong\nDetails : "+
                                     e.toString(), Toast.LENGTH_SHORT).show();
                         }
@@ -108,8 +101,7 @@ public class LoginActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        login.setVisibility(View.GONE);
-                        Toast.makeText(LoginActivity.this, "Something's wrong\nDetails : "+ error.toString(), Toast.LENGTH_SHORT);
+                        Toast.makeText(LoginActivity.this, "Something's wroong\nDetails : "+ error.toString(), Toast.LENGTH_SHORT);
                     }
                 })
         {

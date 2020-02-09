@@ -1,0 +1,132 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.sisuperjatim"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:5:5-66
+11-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+12-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:6:5-97
+12-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:6:22-95
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:7:5-80
+13-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+14-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:8:5-78
+14-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:8:22-76
+15
+16    <permission
+16-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:10:5-12:46
+17        android:name="com.example.permission.MAPS_RECEIVE"
+17-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:11:9-59
+18        android:protectionLevel="signature" />
+18-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:12:9-44
+19
+20    <uses-permission android:name="com.example.permission.MAPS_RECEIVE" />
+20-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:13:5-74
+20-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:13:22-72
+21    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+21-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:8:5-78
+21-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:8:22-76
+22
+23    <uses-feature
+23-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:15:5-17:34
+24        android:glEsVersion="0x00020000"
+24-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:16:9-41
+25        android:required="true" />
+25-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:17:9-32
+26
+27    <!-- Include required permissions for Google Maps API to run. -->
+28    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+28-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+28-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+29
+30    <application
+30-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:19:5-40:19
+31        android:allowBackup="true"
+31-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:20:9-35
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.1.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+33        android:debuggable="true"
+34        android:icon="@drawable/ic_map_black_24dp"
+34-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:21:9-51
+35        android:label="@string/app_name"
+35-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:22:9-41
+36        android:roundIcon="@mipmap/ic_launcher_round"
+36-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:23:9-54
+37        android:supportsRtl="true"
+37-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:24:9-35
+38        android:theme="@style/AppTheme" >
+38-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:25:9-40
+39        <meta-data
+39-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:26:9-28:50
+40            android:name="com.google.android.geo.API_KEY"
+40-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:27:13-58
+41            android:value="@string/api_map_key" />
+41-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:28:13-48
+42
+43        <activity android:name="com.example.sisuperjatim.ProfileActivity" />
+43-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:30:9-62
+43-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:30:19-50
+44        <activity
+44-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:31:9-39:20
+45            android:name="com.example.sisuperjatim.MainActivity"
+45-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:32:13-41
+46            android:label="@string/app_name" >
+46-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:33:13-45
+47            <intent-filter>
+47-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:34:13-38:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:35:17-69
+48-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:35:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:37:17-77
+50-->E:\Kuliah\SiSuper-bram\app\src\main\AndroidManifest.xml:37:27-74
+51            </intent-filter>
+52        </activity>
+53        <!-- Needs to be explicitly declared on P+ -->
+54        <uses-library
+54-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+55            android:name="org.apache.http.legacy"
+55-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+56            android:required="false" />
+56-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+57
+58        <activity
+58-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+59            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+59-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+60            android:exported="false"
+60-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+61            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+61-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+62
+63        <meta-data
+63-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\caa644abd46ff62a6f6df3a234cbb742\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+64            android:name="com.google.android.gms.version"
+64-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\caa644abd46ff62a6f6df3a234cbb742\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+65            android:value="@integer/google_play_services_version" />
+65-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\caa644abd46ff62a6f6df3a234cbb742\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+66
+67        <provider
+67-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\3c03e0805bdfd6180afbf0af0c9cd9a0\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+68            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+68-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\3c03e0805bdfd6180afbf0af0c9cd9a0\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+69            android:authorities="com.example.sisuperjatim.lifecycle-process"
+69-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\3c03e0805bdfd6180afbf0af0c9cd9a0\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+70            android:exported="false"
+70-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\3c03e0805bdfd6180afbf0af0c9cd9a0\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+71            android:multiprocess="true" />
+71-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Acer\.gradle\caches\transforms-2\files-2.1\3c03e0805bdfd6180afbf0af0c9cd9a0\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+72    </application>
+73
+74</manifest>

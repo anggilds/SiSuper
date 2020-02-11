@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText username,password;
     private Button login;
     private TextView link_register;
-    private static String URL_LOGIN = "http://192.168.11.111/bptp/login.php";
+    private static String URL_LOGIN = "http://192.168.1.15/bptp/login.php";
 
 
     @Override
@@ -79,18 +79,26 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             String success = jsonObject.getString("success");
+                            JSONArray jsonArray = jsonObject.getJSONArray("login");
+
                             if (success.equals("1")){
+                                for (int i = 0; i < jsonArray.length(); i ++ ){
+                                    JSONObject object = jsonArray.getJSONObject(i);
+                                    String name = object.getString("name").trim();
+                                    String email = object.getString("email").trim();
 
                                     Toast.makeText(LoginActivity.this, "Logged in! \n"
                                             , Toast.LENGTH_SHORT).show();
-//                                    Intent intent = new Intent(LoginActivity.this, ProfileFragment.class);
-//                                    intent.putExtra("name", name);
-//                                    intent.putExtra("email", email);
-//                                    startActivity(intent);
-
-
+                                    Intent intent = new Intent(LoginActivity.this, ProfileActivityLogged.class);
+                                    intent.putExtra("name", name);
+                                    intent.putExtra("email", email);
+                                    startActivity(intent);
                                 }
 
+                            }else if(success.equals("0")){
+                                Toast.makeText(LoginActivity.this, "Wrong username or password! \n"
+                                        , Toast.LENGTH_SHORT).show();
+                            }
                         } catch (JSONException e){
                             e.printStackTrace();
                             Toast.makeText(LoginActivity.this, "Something's wrong\nDetails : "+

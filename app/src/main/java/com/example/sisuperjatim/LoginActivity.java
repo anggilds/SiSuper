@@ -32,13 +32,16 @@ public class LoginActivity extends AppCompatActivity {
     private EditText username,password;
     private Button login;
     private TextView link_register;
-    private static String URL_LOGIN = "http://192.168.1.15/bptp/login.php";
+    private static String URL_LOGIN = "http://192.168.10.129/bptp/login.php";
+    SessionManager sessionManager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        sessionManager = new SessionManager(this);
+        sessionManager.checkLogin();
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
@@ -86,10 +89,10 @@ public class LoginActivity extends AppCompatActivity {
                                     JSONObject object = jsonArray.getJSONObject(i);
                                     String name = object.getString("name").trim();
                                     String email = object.getString("email").trim();
-
+                                    sessionManager.createSession(name, email);
                                     Toast.makeText(LoginActivity.this, "Logged in! \n"
                                             , Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(LoginActivity.this, ProfileActivityLogged.class);
+                                    Intent intent = new Intent(LoginActivity.this, ProfileFragment.class);
                                     intent.putExtra("name", name);
                                     intent.putExtra("email", email);
                                     startActivity(intent);

@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.sisuperjatim.ui.profile.ProfileFragment;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +16,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
+
+ BottomNavigationView btnProfile;
+SessionManager sessionManager;
+    GoogleMap gMap;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +36,22 @@ public class MainActivity extends AppCompatActivity {
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
+//        btnProfile = navView.findViewById(R.id.navigation_profile);
+//        btnProfile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (sessionManager.is_Loggin()){
+//                    startActivity(new Intent(MainActivity.this, ProfileFragment.class));
+//                }else
+//                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+//            }
+//        });
     }
 
-    public void selectLogin(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
+
+//    public void selectLogin(View view) {
+//        Intent intent = new Intent(this, LoginActivity.class);
+//        startActivity(intent);
+//    }
 
 }

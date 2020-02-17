@@ -62,7 +62,7 @@ public class SessionManager {
         return user;
     }
 
-    public void Logout(){
+    public void logout(){
         editor.clear();
         editor.commit();
         Intent i = new Intent(context, LoginActivity.class);

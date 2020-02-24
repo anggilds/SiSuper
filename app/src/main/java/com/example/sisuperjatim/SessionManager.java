@@ -47,10 +47,10 @@ public class SessionManager {
     }
 
     public void checkLogin(){
-        if (!this.is_Loggin()){
+        if (!is_Loggin()){
             Intent i = new Intent(context, LoginActivity.class);
             context.startActivity(i);
-            ((ProfileActivityLogged)context).finish();
+            ((MainActivity)context).finish();
         }
     }
 

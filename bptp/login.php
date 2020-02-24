@@ -1,4 +1,3 @@
-
 <?php
 
 if ($_SERVER['REQUEST_METHOD']=='POST') {
@@ -8,32 +7,23 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
     require_once 'conn.php';
 
-    $sql = " SELECT * FROM student WHERE username='$username' ";
+    $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'; ";
 
     $response = mysqli_query($conn, $sql);
 
+    $result = array();
+    $result['login'] = array();
     
-    if ($response) {
-      	if ( password_verify($password, $row['password']) ) {
-          	$result['success'] = "1";
-            $result['message'] = "success";
-            
-     		echo json_encode($result);
-			mysqli_close($conn);
-
-        } else {
-			$result['success'] = "0";
-            $result['message'] = "error";
-            
-            echo json_encode($result);
-			mysqli_close($conn);
-
-        }
-
-    }else{
-    	$result['success'] = "0";
-        $result['message'] = "error";
-    }
-
+    if ( mysqli_num_rows($response) === 1 ) {
+        $row = mysqli_fetch_assoc($response);
+        $index['username'] = $row['username'];
+        $index['email'] = $row['email'];
+        $index['name'] = $row['name'];
+        array_push($result['login'], $index);
+        $result['success'] = "1";
+	} else {
+		$result['success'] = "0";
+	}
+	echo json_encode($result);
+    mysqli_close($conn);
 }
-

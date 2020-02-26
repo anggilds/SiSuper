@@ -14,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -65,7 +66,7 @@ public class SessionManager {
     public void logout(){
         editor.clear();
         editor.commit();
-        Intent i = new Intent(context, LoginActivity.class);
+        Intent i = new Intent(context, MainActivity.class);
         context.startActivity(i);
         ((ProfileActivityLogged)context).finish();
     }

@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $index['username'] = $row['username'];
         $index['email'] = $row['email'];
         $index['name'] = $row['name'];
+        
+
         array_push($result['login'], $index);
         $result['success'] = "1";
 	} else {
@@ -27,3 +29,4 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 	echo json_encode($result);
     mysqli_close($conn);
 }
+

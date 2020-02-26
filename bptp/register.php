@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (mysqli_query($conn,$query)) {
 		$result["success"] = "1";
 		$result["message"] = "success";
-
 		echo json_encode($result);
 		mysqli_close($conn);
 	} else {

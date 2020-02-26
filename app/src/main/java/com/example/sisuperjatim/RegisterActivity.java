@@ -41,7 +41,22 @@ public class RegisterActivity extends AppCompatActivity {
         register = findViewById(R.id.link_register);
 
 
-        register.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v){ register();}});
+        register.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v){
+            String mUsername = username.getText().toString().trim();
+            String mPassword = password.getText().toString().trim();
+            String mEmail = username.getText().toString().trim();
+            String mName= password.getText().toString().trim();
+
+            if (!mUsername.isEmpty() || !mPassword.isEmpty() || !mName.isEmpty() || mEmail.isEmpty()){
+                register();
+            }else{
+                username.setError("Username is empty!");
+                password.setError("Password is empty!");
+                name.setError("Name is empty!");
+                email.setError("Email is empty!");
+            }
+            }
+        });
     }
 
     private void register(){

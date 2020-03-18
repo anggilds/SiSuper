@@ -107,16 +107,22 @@
         <item>	Kasar	</item>
     </string-array>
     <string-array name="kedalaman_olah">
-        <item>	Sangat dangkal</item>
-        <item>	Dangkal</item>
-        <item>	Sedang</item>
-        <item>	Dalam</item>
-        <item>	Sangat dalam</item>
+        <item>	Sangat dangkal ( Kurang dari 5 cm) </item>
+        <item>	Dangkal (5-15 cm) </item>
+        <item>	Sedang (15-25 cm) </item>
+        <item>	Dalam (25-35 cm) </item>
+        <item>	Sangat dalam ( Lebih dari 35 cm) </item>
     </string-array>
     <string-array name="pola_tanam">
-        <item>	Padi-Padi-Padi	</item>
-        <item>	Padi-Padi-Padi	</item>
-        <item>	Padi-Padi-Padi	</item>
+        <item>	Padi-Padi-Padi </item>
+        <item>	Padi-Padi-Palawija </item>
+        <item>	Padi-Palawija-Palawija </item>
+        <item>	Padi-Palawija-Bera </item>
+        <item>	Padi-Hortikultura-Hortikultura </item>
+        <item>	Padi-Hortikultura-Bera </item>
+        <item>	Padi-Palawija-Tembakau </item>
+        <item>	Tebu </item>
+        <item>	Lain-Lain </item>
     </string-array>
     <string-array name="varietas">
         <item>	Inpari	</item>
@@ -129,11 +135,11 @@
         <item>	Hibrida	</item>
     </string-array>
     <string-array name="provitas">
-        <item>	Sangat rendah</item>
-        <item>	Rendah</item>
-        <item>	Sedang</item>
-        <item>	Tinggi</item>
-        <item>	Sangat tinggi</item>
+        <item>	Sangat rendah ( Kurang Dari 3 t/ha)</item>
+        <item>	Rendah (3-5 t/ha) </item>
+        <item>	Sedang (5-7 t/ha) </item>
+        <item>	Tinggi (7-9 t/ha) </item>
+        <item>	Sangat tinggi ( Lebih dari 9 t/ha) </item>
     </string-array>
     <string-array name="penggunaan_pupuk">
         <item>	Organik	</item>
